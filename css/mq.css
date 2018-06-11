@@ -1,0 +1,50 @@
+@media (max-width:1024px) and (min-width:768px) {
+
+    .herocontainer{
+
+        background: url(../src/bg_1024.jpg) no-repeat center center fixed !important;
+        background-size: 100%!important;
+    }
+
+}
+
+@media (max-width:414px) and (min-width:320px) {
+
+    .herocontainer{
+
+        background: url(../src/bg_360.jpg) no-repeat center center fixed!important;
+        background-size: 100%!important;
+    }
+
+}
+
+@media (width:375px) and (height:812px) {
+
+    .herocontainer{
+
+        background: url(../src/bg_x.jpg) no-repeat center center fixed !important;
+        background-size: 100%!important;
+    }
+
+}
+
+@media (width:411px) and (height:823px) {
+
+    .herocontainer{
+
+        background: url(../src/bg_x_2.jpg) no-repeat center center fixed !important;
+        background-size: 100%!important;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 414px) {
+    .herotxt_title {
+        font-size: 25px;
+    }
+
+    .hero_input {
+        padding: 0 10%;
+    }
+}
+

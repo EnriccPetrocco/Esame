@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Flight Search</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="dipendenze/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/mq.css" rel="stylesheet" >
+
+  </head>
+
+  <body>
+    
+    <!-- Herobanner -->
+    <div class="container-fluid herocontainer">
+      <div class="herotxt">
+        <h1 class="herotxt_title">CERCA IL N° DEL VOLO<span id="actor-title" class="flight-number">...</span></h1>
+        <div class="input-group hero_input">
+          <input id="flight-number" type="text" class="form-control hero_input_txt" placeholder="N° Volo">
+          <span class="input-group-btn">
+              <button id="flight-search" class="btn btn-secondary hero_input_btn" type="button">CERCA</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+      <div id="flight-container" class="row">
+      </div>
+      <div id="map-container" class="row">
+      </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="dipendenze/jquery/jquery.min.js"></script>
+    <script src="dipendenze/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dipendenze/masonry/imagesloaded.pkgd.min.js"></script>
+    <script src="dipendenze/masonry/masonry.pkgd.min.js"></script>
+    <script src="js/Flight-Tracker.js"></script>
+
+  </body>
+
+</html>
