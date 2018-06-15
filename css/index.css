@@ -17,12 +17,13 @@ body {
   margin-bottom: 30px;
 }
 
-/*hero*/
-.herocontainer{
+
+.herocontainer {
 	width: 100%;
 	height: 100%;
     background: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ),url(../src/bg_final1.jpg) no-repeat center center fixed;
-    background-size: cover;
+	background-size: cover;
+	
 }
 
 .herotxt{
@@ -31,6 +32,13 @@ body {
 	top: 50%;
 	transform: translateY(-50%);
 	text-align: center;
+}
+
+.herotxt1{
+	color: white;
+	position: relative;
+	margin-left: 50px;
+	font-size: 25px;
 }
 
 .hero_input{
@@ -50,12 +58,19 @@ body {
 
 }
 
-/* movies-container*/
-
-.flight-container{
-	padding-top: 50px;
+#flight-container{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px 10px 10px 10px;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ccc;
+	border-radius: 16px;
 }
 
-.map-container{
-	padding-top: 100px;
+#map-container{
+	margin-top: 10px;
+	padding-top: 50px;
+	width: 200px;
+	height: 250px;
 }

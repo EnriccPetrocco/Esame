@@ -13,9 +13,15 @@
     <!-- Bootstrap CSS -->
     <link href="dipendenze/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- LeafLet CSS -->
+    <link href="dipendenze/leaflet/leaflet.css" rel="stylesheet">
+
     <!-- Custom styles -->
     <link href="css/index.css" rel="stylesheet">
     <link href="css/mq.css" rel="stylesheet" >
+    <link href="css/kf.css" rel="stylesheet" >
+
+
 
   </head>
 
@@ -34,12 +40,14 @@
       </div>
     </div>
 
+
     <!-- Content -->
-    <div class="container">
-      <div id="flight-container" class="row">
+    <div class="container-fluid">
+      <div id="flight-container">
+          <div id="map-container">
+            </div>
       </div>
-      <div id="map-container" class="row">
-      </div>
+
     </div>
 
     <!-- Bootstrap JavaScript -->
@@ -48,6 +56,7 @@
     <script src="dipendenze/masonry/imagesloaded.pkgd.min.js"></script>
     <script src="dipendenze/masonry/masonry.pkgd.min.js"></script>
     <script src="js/Flight-Tracker.js"></script>
+    <script src="dipendenze/leaflet/leaflet.js"></script>
 
   </body>
 
