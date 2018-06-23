@@ -1,32 +1,33 @@
-
 function datiArrivati(data){
   console.log(data)
   let flight = data[0];
 
+
   $("#flight-container")
-    .append("<div class='card-img-top'><p><img src='https://cdn.airplane-pictures.net/images/uploaded-images/2016/4/13/703601m.jpg'>"+"</p><p>Airplane: "+ flight.aircraft.name+"<br>Departures: "+flight.departure.iataCode+"<br>Arrival: "+flight.arrival.iataCode+"<br> Speed: "+flight.speed.horizontal+" km/h"+"<br>Status: "+flight.status+"</p><div id='map-container'></div></div>");
+  .append("<div class='row'><div class='card-img-top col-lg-6 col-sm-12'><p><img class='rounded img' src='https://cdn.airplane-pictures.net/images/uploaded-images/2016/4/13/703601m.jpg'>"+"    </p><p>Airplane: "+ flight.aircraft.name+"<br>Departures: "+flight.departure.iataCode+"<br>Arrival: "+flight.arrival.iataCode+"<br> Speed: "+flight.speed.horizontal+" km/h"+"<br>Status: "+flight.status+"</div></p><div class='col-lg-6 col-sm-12'><div id='map-container'></div></div></div>");
 
   let longitude = flight.geography.longitude;
   let latitude = flight.geography.latitude;
-  let map = L.map('map-container').setView([latitude, longitude], 5);
+  let map = L.map('map-container').setView([latitude, longitude], 7);
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
+}).addTo(map);
   
   L.marker(
     [latitude, longitude],
     {
       icon: L.icon({
         iconUrl: "src/airplane.png",
-        iconSize: [50, 22],
-        iconAnchor: [25, 20],     
+        iconSize: [50, 22],   
+        iconAncor: [55, -5],
+        popupAnchor: [0,-5], 
 
       })
     }
   )
   .addTo(map)
-  .bindPopup("<b>"+flight.aircraft.name+"</b>")
+  .bindPopup("<b>"+flight.aircraft.name+"</b>"+"<br>"+flight.speed.horizontal+" km/h"+"<br>")
   .closePopup();
 
   $("#flight-container").slideDown();
