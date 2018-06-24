@@ -1,10 +1,12 @@
+let img = [ "img1", "img2", "img3", "img4", "img5","img6", "img7", "img8", "img9", "img10"];
+
 function datiArrivati(data){
   console.log(data)
   let flight = data[0];
 
 
   $("#flight-container")
-  .append("<div class='row'><div class='card-img-top col-lg-6 col-sm-12'><p><img class='rounded img' src='https://cdn.airplane-pictures.net/images/uploaded-images/2016/4/13/703601m.jpg'>"+"    </p><p>Airplane: "+ flight.aircraft.name+"<br>Departures: "+flight.departure.iataCode+"<br>Arrival: "+flight.arrival.iataCode+"<br> Speed: "+flight.speed.horizontal+" km/h"+"<br>Status: "+flight.status+"</div></p><div class='col-lg-6 col-sm-12'><div id='map-container'></div></div></div>");
+  .append("<div class='row'><div class='card-img-top col-lg-6 col-sm-12'><p><img class='img img-rounded img-fluid' src=src/" + img[ Math.floor( Math.random() * 10 ) ] + ".jpg></p><p>Airplane: "+ flight.aircraft.name+"<br>Departures: "+flight.departure.iataCode+"<br>Arrival: "+flight.arrival.iataCode+"<br> Speed: "+flight.speed.horizontal+" km/h"+"<br>Status: "+flight.status+"</div></p><div class='col-lg-6 col-sm-12'><div id='map-container'></div></div></div>");
 
   let longitude = flight.geography.longitude;
   let latitude = flight.geography.latitude;
@@ -50,10 +52,6 @@ $(function() {
     $.getJSON(finalUrl, datiArrivati)
 
     console.log("Chiamata Partita")  
-
-    
-
-
 
   })
   
